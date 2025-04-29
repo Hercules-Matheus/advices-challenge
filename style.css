@@ -1,0 +1,126 @@
+@import "variables.css";
+@import "reset.css";
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  background-color: var(--secondary-blue-950);
+  height: 100vh;
+}
+
+#advice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35vw;
+  color: var(--primary-blue);
+  background-color: var(--secondary-blue-900);
+  border-radius: 16px;
+}
+
+#advice > .title {
+  color: var(--primary-green);
+  font-size: 12px;
+  letter-spacing: 4px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#advice > .adviceText {
+  width: 80%;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  color: var(--primary-blue);
+  line-height: 1.25;
+  text-align: center;
+  padding: 0 30px;
+}
+
+#advice > .divider {
+  width: 80%;
+  height: 15px;
+  background-image: url("images/pattern-divider-desktop.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 40px;
+}
+
+#advice > .btn {
+  position: relative;
+  bottom: -5vh;
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-green);
+  background-image: url("images/icon-dice.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#advice > .btn:active {
+  filter: drop-shadow(0 0 0.75rem var(--primary-green));
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+@media only screen and (max-width: 904px) {
+  #advice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    color: var(--primary-blue);
+    background-color: var(--secondary-blue-900);
+    border-radius: 16px;
+  }
+
+  #advice > .title {
+    color: var(--primary-green);
+    font-size: 12px;
+    letter-spacing: 4px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  #advice > .adviceText {
+    width: 75%;
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    color: var(--primary-blue);
+    line-height: 1.25;
+    text-align: center;
+    padding: 0 30px;
+  }
+
+  #advice > .divider {
+    width: 75%;
+    height: 15px;
+    background-image: url("images/pattern-divider-mobile.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 20px;
+  }
+
+  #advice > .btn:active {
+    filter: drop-shadow(0 0 0.75rem var(--primary-green));
+  }
+}

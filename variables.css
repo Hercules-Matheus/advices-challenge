@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+:root {
+  --primary-blue: #cee3e9;
+  --primary-green: #52ffa8;
+
+  --secondary-blue-600: #4e5d73;
+  --secondary-blue-900: #323a49;
+  --secondary-blue-950: #1f2632;
+
+  --font-family: "Manrope";
+  --font-size: 28px;
+  --font-weight: 800;
+}
