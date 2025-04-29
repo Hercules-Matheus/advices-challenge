@@ -9,10 +9,12 @@ body {
   font-family: var(--font-family);
   font-weight: var(--font-weight);
   background-color: var(--secondary-blue-950);
-  height: 100vh;
+  height: 100dvh;
+  -webkit-touch-callout: none; /* Desativa o menu de toque */
+  -webkit-tap-highlight-color: transparent; /* Remove o destaque azul */
 }
 
-#advice {
+.advice {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +25,7 @@ body {
   border-radius: 16px;
 }
 
-#advice > .title {
+.advice > .title {
   color: var(--primary-green);
   font-size: 12px;
   letter-spacing: 4px;
@@ -32,7 +34,7 @@ body {
   text-align: center;
 }
 
-#advice > .adviceText {
+.advice > .adviceText {
   width: 80%;
   font-size: var(--font-size);
   font-weight: var(--font-weight);
@@ -42,17 +44,17 @@ body {
   padding: 0 30px;
 }
 
-#advice > .divider {
+.advice > .divider {
   width: 80%;
   height: 15px;
   background-image: url("images/pattern-divider-desktop.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
-#advice > .btn {
+.advice > .btn {
   position: relative;
   bottom: -5vh;
   width: 60px;
@@ -63,10 +65,20 @@ body {
   background-repeat: no-repeat;
   border-radius: 50%;
   cursor: pointer;
+  outline: none;
+  user-select: none; /* Evita seleção de texto */
+  -webkit-user-select: none; /* Evita seleção de texto */
+  -webkit-tap-highlight-color: transparent; /* Remove o destaque azul */
 }
 
-#advice > .btn:active {
-  filter: drop-shadow(0 0 0.75rem var(--primary-green));
+.advice > .btn:focus {
+  outline: none; /* Remove o contorno ao focar */
+}
+
+.advice > .btn:disabled {
+  filter: none;
+  background-color: var(--secondary-blue-600);
+  cursor: not-allowed;
 }
 
 .attribution {
@@ -80,7 +92,7 @@ body {
 }
 
 @media only screen and (max-width: 904px) {
-  #advice {
+  .advice {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,7 +103,7 @@ body {
     border-radius: 16px;
   }
 
-  #advice > .title {
+  .advice > .title {
     color: var(--primary-green);
     font-size: 12px;
     letter-spacing: 4px;
@@ -100,7 +112,7 @@ body {
     text-align: center;
   }
 
-  #advice > .adviceText {
+  .advice > .adviceText {
     width: 75%;
     font-size: var(--font-size);
     font-weight: var(--font-weight);
@@ -110,7 +122,7 @@ body {
     padding: 0 30px;
   }
 
-  #advice > .divider {
+  .advice > .divider {
     width: 75%;
     height: 15px;
     background-image: url("images/pattern-divider-mobile.svg");
@@ -118,9 +130,5 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: 20px;
-  }
-
-  #advice > .btn:active {
-    filter: drop-shadow(0 0 0.75rem var(--primary-green));
   }
 }
